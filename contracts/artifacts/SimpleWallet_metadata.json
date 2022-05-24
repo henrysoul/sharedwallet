@@ -1,0 +1,279 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_who",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_oldAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_newAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "AllowanceChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "MoneyReceived",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_beneficiary",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "MoneySent",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_who",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "addAllowance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "allowance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withDrawMoney",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SimpleWallet.sol": "SimpleWallet"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Allowance.sol": {
+			"keccak256": "0x95f567e54c823487154184ebe3b32124dfc67b2f01f566fd9c04aba9df7e251c",
+			"urls": [
+				"bzz-raw://bee2d1a47616568654bed2bb3727fa659bd3b4a997a36f7c8b3d768b82d9ce9d",
+				"dweb:/ipfs/QmWhPvupg49a63RQYU2fHYYXooyjjz32MKaceL9pT7b61C"
+			]
+		},
+		"contracts/SimpleWallet.sol": {
+			"keccak256": "0x6e7c52bbb4fcd337fb7e82a4e3053a0249f4bb1595b9ebe70dfa5c38f67eb5d1",
+			"urls": [
+				"bzz-raw://bb8cb74e64c95d2eb87de57cbe38efe560b8c1538e91fa01efacb242a0ac412d",
+				"dweb:/ipfs/QmQpLTA4hfKb4A4A9bkreBDZqi6EJhQ4VNGynsehnWjuMW"
+			]
+		},
+		"contracts/utils/Context.sol": {
+			"keccak256": "0xa9646dbb82dd7a5079aac0e3df6e2df45b81f60062028cfc8912299a7dd004b4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a4ae260034cbc1a6ab3c276c7e820524214952f33d2793d6f4544dedc8a37dc",
+				"dweb:/ipfs/QmXNbx4KJqkTXcoEhDPEvz1pWBTZFnNuA9GVAvSBZ4qDgn"
+			]
+		},
+		"contracts/utils/Ownable.sol": {
+			"keccak256": "0xfb29c9415296621e971896fd27ce8d39898c223aa78366f27b4363bb2f44a086",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4f180c471d8c798145822275af5f41d9daf588a91b4d2b8167ea8e55beae4f4d",
+				"dweb:/ipfs/QmVmgedv4D1oyZjsJjXtnexW8Qpsg5TPK4hpnuq6hvUjp3"
+			]
+		},
+		"contracts/utils/SafeMath.sol": {
+			"keccak256": "0xdc9b51d94a1db880c1f2e722af561c28c41100eea201b1ae5e77eb7c4250e389",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0b69f7fb378dcfd4aff8ba0547a575485d2d4bb567381e3bf8c593b63272ffc0",
+				"dweb:/ipfs/QmaEo28ZDAnpDvpQRRt7Qc8bF5QgJAnTEE4TxYnJS8YmnN"
+			]
+		}
+	},
+	"version": 1
+}
